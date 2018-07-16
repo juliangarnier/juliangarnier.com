@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 body {
+  direction: rtl;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +35,7 @@ body {
   transition: border-radius .25s ease-out .075s;
 }
 .bubble.left.cornered {
-  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .bubble.left {
   background: rgba(206,206,206,0.50);
