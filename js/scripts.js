@@ -25,7 +25,7 @@ window.onload = function() {
     '👋 Hi, I\'m Adrian',
     'I’m a software engineer living in Cluj-Napoca and working on the iOS team at <a href="https://softhaus.org">softhaus</a>.',
     'I’ve been working with iOS for more than 3 years now.',
-    'Feel free to email me at adi@softhaus.org or read more about me.',
+    'Feel free to email me at adi@softhaus.org or connect with me through the following links.',
     '<a target="_blank" href="https://twitter.com/perteadrian">twitter.com/perteadrian</a><br><a target="_blank" href="https://github.com/perteadrian">github.com/perteadrian</a>',
     getCurrentTime(),
     '👀 Adi.'
