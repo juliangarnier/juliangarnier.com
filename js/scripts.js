@@ -25,8 +25,8 @@ window.onload = function() {
     'سلام 👋',
     'من مهدیارم',
     'من یک Full Stack Developer هستم',
-    'من در حال حاظر پروژه های فریلنسری قبول میکنم .<br> درتماس باشید : <a href="mailto:mhp1380@gmail.com">mhp1380@gmail.com</a>',
-    '<a target="_blank" href="https://t.me/beunco">t.me/beunco</a><br><a target="_blank" href="https://github.com/mahdyar">github.com/mahdyar</a>',
+    'من در حال حاظر پروژه های فریلنسری قبول میکنم .<br> درتماس باشید : <a href="mailto:ThisisMahdyar@gmail.com">ThisisMahdyar@gmail.com</a>',
+    '<a target="_blank" href="https://t.me/ThisisMahdyar">t.me/ThisisMahdyar</a><br><a target="_blank" href="https://github.com/mahdyar">github.com/mahdyar</a>',
     getCurrentTime(),
     'م 👀 .'
   ]
