@@ -16,16 +16,16 @@ window.onload = function() {
     var hours =  date.getHours();
     var minutes =  date.getMinutes();
     var current = hours + (minutes * .01);
-    if (current >= 5 && current < 19) return 'روز خوبی داشته باشید';
-    if (current >= 19 && current < 22) return 'عصر خوبی داشته باشید';
-    if (current >= 22 || current < 5) return 'شب خوشی داشته باشید';
+    if (current >= 5 && current < 19) return 'روزِ خوبی داشته باشید.';
+    if (current >= 19 && current < 22) return 'عَصرِ خوبی داشته باشید.';
+    if (current >= 22 || current < 5) return 'شَبِ خوشی داشته باشید.';
   }
 
   var messages = [
-    'سلام 👋',
-    'من مهدیارم',
-    'من یک Full Stack Developer هستم',
-    'من در حال حاظر پروژه های فریلنسری قبول میکنم .<br> درتماس باشید : <a href="mailto:ThisisMahdyar@gmail.com">ThisisMahdyar@gmail.com</a>',
+    'درود. 👋',
+    'مَن مهدیارَم.',
+    'من یک Full Stack Developer هستم.',
+    'من در حال حاظر پروژه های فریلنسری قبول می‌کنم.<br>در تماس باشید:<a href="mailto:ThisisMahdyar@gmail.com">ThisisMahdyar@gmail.com</a>',
     '<a target="_blank" href="https://t.me/ThisisMahdyar">t.me/ThisisMahdyar</a><br><a target="_blank" href="https://github.com/mahdyar">github.com/mahdyar</a>',
     getCurrentTime(),
     'م 👀 .'
