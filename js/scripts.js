@@ -25,10 +25,10 @@ window.onload = function() {
     'درود. 👋',
     'مَن مهدیارَم.',
     'من یک Full Stack Developer هستم.',
-    'من در حال حاظر پروژه های فریلنسری قبول می‌کنم.<br>در تماس باشید:<a href="mailto:ThisisMahdyar@gmail.com">ThisisMahdyar@gmail.com</a>',
+    'من در حال حاظر پروژه های فریلنسری قبول می‌کنم.<br>در تماس باشید: <a href="mailto:ThisisMahdyar@gmail.com">ThisisMahdyar@gmail.com</a>',
     '<a target="_blank" href="https://t.me/ThisisMahdyar">t.me/ThisisMahdyar</a><br><a target="_blank" href="https://github.com/mahdyar">github.com/mahdyar</a>',
     getCurrentTime(),
-    'م 👀 .'
+    'م 👀.'
   ]
 
   var getFontSize = function() {
