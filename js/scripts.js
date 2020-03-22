@@ -24,8 +24,8 @@ window.onload = function() {
   var messages = [
     'درود. 👋',
     'مَن مهدیارَم.',
-    'من یک Full Stack Developer هستم.',
-    'من در حال حاظر پروژه های فریلنسری قبول می‌کنم.<br>در تماس باشید: <a href="mailto:ThisisMahdyar@gmail.com">ThisisMahdyar@gmail.com</a>',
+    'من یک «Full Stack Developer» هستم.',
+    'من در حال حاظر پروژه‌های فریلنسری قبول می‌کنم.<br>در تماس باشید: <a href="mailto:ThisisMahdyar@gmail.com">ThisisMahdyar@gmail.com</a>',
     '<a target="_blank" href="https://t.me/mhdyr">t.me/mhdyr</a><br><a target="_blank" href="https://github.com/mahdyar">github.com/mahdyar</a>',
     getCurrentTime(),
     'م 👀.'
