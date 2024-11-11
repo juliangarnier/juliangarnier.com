@@ -1,4 +1,20 @@
-:root { font-size: 1.125rem; }
+:root {
+  font-size: 1.125rem;
+  --bg0: #FFF;
+  --bg1: rgba(206,206,206,.5);
+  --fg0: #000;
+  --fg1: rgba(0,0,0,.5);
+  --a0: #0076FF;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg0: #000;
+    --bg1: rgba(206,206,206,.125);
+    --fg0: #FFF;
+    --fg1: rgba(206,206,206,.5);
+    --a0: #0076FF;
+  }
+}
 @media (min-width: 600px) { :root { font-size: 1.5rem; } }
 @media (min-width: 900px) { :root { font-size: 1.75rem; } }
 @media (min-width: 1200px) { :root { font-size: 2rem; } }
@@ -7,14 +23,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+body, html {
+  background: var(--bg0);
+  color: var(--fg0);
+}
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 100vw;
-  min-height: 100vh;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #FFF;
+  min-height: 100dvh;
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 .messages {
   overflow: auto;
@@ -37,40 +56,25 @@ body {
   border-bottom-left-radius: 0;
 }
 .bubble.left {
-  background: rgba(206,206,206,0.50);
-}
-.bubble:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -.5rem;
-  width: .5rem;
-  height: .5rem;
-  background-image: url(../img/corner.svg);
-  background-size: .5rem .5rem;
-  background-position: .5rem 0;
-  background-repeat: no-repeat;
-  transition: background-position .15s ease-in;
-}
-.bubble.cornered:after {
-  background-position: 0 0;
+  background: var(--bg1);
 }
 .bubble span {
-  display: block;
+  display: inline;
 }
 .bubble span.message {
   opacity: 0;
+  line-height: 1.125;
 }
 .bubble a {
-  color: #0076FF;
+  color: var(--a0);
 }
 .bubble .loading {
   position: absolute;
-  width: 2.25rem;
-  font-size: 2rem;
+  white-space: pre;
+  font-size: 1.625rem;
   line-height: 1rem;
 }
 .bubble .loading b {
   display: inline-block;
-  color: rgba(0,0,0,.5);
+  color: var(--fg1);
 }

@@ -6,7 +6,7 @@
 
 window.onload = function() {
 
-  var messagesEl = document.querySelector('.messages');
+  var messagesEl = /** @type {HTMLElement} */(document.querySelector('.messages'));
   var typingSpeed = 20;
   var loadingText = '<b>•</b><b>•</b><b>•</b>';
   var messageIndex = 0;
@@ -25,10 +25,11 @@ window.onload = function() {
     'Hey there 👋',
     'I\'m Julian',
     'I design and code things on the web',
-    'I\'m currently accepting freelance work.<br> You can contact me at <a href="mailto:hello@julian.gr">hello@julian.gr</a>',
-    '<a target="_blank" href="https://twitter.com/juliangarnier">twitter.com/juliangarnier</a><br><a target="_blank" href="https://codepen.io/juliangarnier">codepen.io/juliangarnier</a><br><a target="_blank" href="https://github.com/juliangarnier">github.com/juliangarnier</a>',
+    'I\'m currently working on <a href="https://github.com/sponsors/juliangarnier" target="_blank">anime.js v4</a>',
+    'You can find me on <a target="_blank" href="https://x.com/juliangarnier">X</a>, <a target="_blank" href="https://bsky.app/profile/juliangarnier.bsky.social">Bluesky</a> and <a target="_blank" href="https://github.com/juliangarnier">GitHub</a>',
+    'Or contact me directly at <a href="mailto:hello@julian.gr">hello@julian.gr</a>',
     getCurrentTime(),
-    '👀 J.'
+    '~ J.',
   ]
 
   var getFontSize = function() {
@@ -53,7 +54,7 @@ window.onload = function() {
     loadingEl.innerHTML = loadingText;
     bubbleEl.appendChild(loadingEl);
     bubbleEl.appendChild(messageEl);
-    bubbleEl.style.opacity = 0;
+    bubbleEl.style.opacity = `0`;
     return {
       bubble: bubbleEl,
       message: messageEl,
@@ -62,18 +63,23 @@ window.onload = function() {
   }
 
   var getDimentions = function(elements) {
-    return dimensions = {
+    const messageW = elements.message.offsetWidth + 2;
+    const messageH = elements.message.offsetHeight;
+    const messageS = getComputedStyle(elements.bubble);
+    const paddingTop = Math.ceil(parseFloat(messageS.paddingTop));
+    const paddingLeft = Math.ceil(parseFloat(messageS.paddingLeft));
+    return {
       loading: {
         w: '4rem',
         h: '2.25rem'
       },
       bubble: {
-        w: pxToRem(elements.bubble.offsetWidth + 4),
-        h: pxToRem(elements.bubble.offsetHeight)
+        w: pxToRem(messageW + paddingLeft * 2),
+        h: pxToRem(messageH + paddingTop * 2)
       },
       message: {
-        w: pxToRem(elements.message.offsetWidth + 4),
-        h: pxToRem(elements.message.offsetHeight)
+        w: pxToRem(messageW),
+        h: pxToRem(messageH)
       }
     }
   }
@@ -84,11 +90,12 @@ window.onload = function() {
     messagesEl.appendChild(elements.bubble);
     messagesEl.appendChild(document.createElement('br'));
     var dimensions = getDimentions(elements);
+    elements.message.style.display = 'block';
     elements.bubble.style.width = '0rem';
     elements.bubble.style.height = dimensions.loading.h;
     elements.message.style.width = dimensions.message.w;
     elements.message.style.height = dimensions.message.h;
-    elements.bubble.style.opacity = 1;
+    elements.bubble.style.opacity = `1`;
     var bubbleOffset = elements.bubble.offsetTop + elements.bubble.offsetHeight;
     if (bubbleOffset > messagesEl.offsetHeight) {
       var scrollMessages = anime({
@@ -99,7 +106,7 @@ window.onload = function() {
     }
     var bubbleSize = anime({
       targets: elements.bubble,
-      width: ['0rem', dimensions.loading.w],
+      width: ['0ch', dimensions.loading.w],
       marginTop: ['2.5rem', 0],
       marginLeft: ['-2.5rem', 0],
       duration: 800,
@@ -156,7 +163,7 @@ window.onload = function() {
         marginLeft: 0,
         begin: function() {
           if (messageIndex < messages.length) elements.bubble.classList.remove('cornered');
-        }
+        },
       })
     }, loadingDuration - 50);
   }
