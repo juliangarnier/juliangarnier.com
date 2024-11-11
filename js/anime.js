@@ -1,7 +1,7 @@
 /*
  * Anime v0.0.0
  * http://anime-js.com
- * Javascript animation library
+ * JavaScript animation library
  * Copyright (c) 2016 Julian Garnier
  * http://juliangarnier.com
  * Released under the MIT license
